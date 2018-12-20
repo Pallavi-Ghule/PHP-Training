@@ -1,0 +1,16 @@
+Write a Variable Argument List functions and Pass 100 values to it using For loop
+
+function add(...$numbers) {  
+    $sum = 0;  
+    foreach ($numbers as $n) {  
+        $sum += $n;  
+    }  
+    return $sum;  
+}  
+
+$arg_list = array();
+foreach (range(0, 100) as $val) {
+ array_push($arg_list,$val);
+}
+
+echo add(implode($arg_list));
